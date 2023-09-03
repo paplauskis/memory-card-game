@@ -35,3 +35,9 @@ h2 {
   width: 100%;
   height: calc(100vh - 150px);
 }
+
+.start-window > button:hover {
+  cursor: pointer;
+  background-color: gray;
+  transition: 0.5s;
+}
