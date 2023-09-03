@@ -1,3 +1,10 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+body {
+  background-color: rgb(76, 75, 80);
+  margin: 0;
+  color: aliceblue;
+}
+
