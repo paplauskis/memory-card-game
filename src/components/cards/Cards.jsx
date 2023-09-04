@@ -20,7 +20,7 @@ function Cards({ pokemon }) {
         if (++index <= 12) {
           return (
             <div className="card" key={p.name}>
-              <img src={getPokemonImg(p.url)} alt="pokemon" />
+              <img src={getPokemonImg(p.url)} alt={`${p.name}, pokemon`} />
               <p>{p.name.toUpperCase()}</p>
             </div>
           )
