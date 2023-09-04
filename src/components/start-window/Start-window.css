@@ -31,9 +31,10 @@ h2 {
 }
 
 .background-div {
-  background-color: rgba(69, 69, 54, 0.4);
+  background-color: rgba(69, 69, 54, 0.5);
   width: 100%;
   height: calc(100vh - 150px);
+  position: absolute;
 }
 
 .start-window > button:hover {
