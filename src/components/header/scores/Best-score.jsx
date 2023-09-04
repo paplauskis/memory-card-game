@@ -1,6 +1,6 @@
-function BestScore() {
+function BestScore(props) {
   return (
-    <p className="best-score">Best Score: {}</p>
+    <p className="best-score">Best Score: {props.bestScore}</p>
   )
 }
 
