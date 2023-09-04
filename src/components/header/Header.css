@@ -7,7 +7,7 @@
 
 header {
   background-color: rgb(47, 23, 70);
-  padding: 25px 150px;
+  padding: 10px 150px;
   display: flex;
   justify-content: space-between;
   max-height: 100px;
