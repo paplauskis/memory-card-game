@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(69, 69, 54);
+  background-color: rgb(79, 79, 79);
   padding: 40px;
   gap: 30px;
   border-radius: 20px;
@@ -20,10 +20,11 @@
 
 .start-window > button {
   border: none;
-  background-color: rgb(160, 65, 65);
+  background-color: rgb(47, 23, 70);
   padding: 20px;
   color: aliceblue;
   border-radius: 20px;
+  transition: 0.5s;
 }
 
 h2 {
@@ -31,7 +32,7 @@ h2 {
 }
 
 .background-div {
-  background-color: rgba(69, 69, 54, 0.5);
+  background-color: rgba(41, 41, 41, 0.8);
   width: 100%;
   height: calc(100vh - 150px);
   position: absolute;
@@ -39,6 +40,6 @@ h2 {
 
 .start-window > button:hover {
   cursor: pointer;
-  background-color: gray;
-  transition: 0.5s;
+  background-color: rgb(79, 39, 119);
+  outline: 1px solid rebeccapurple;
 }
