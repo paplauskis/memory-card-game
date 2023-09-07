@@ -1,0 +1,57 @@
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 100; }
+}
+
+.game-over-window {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(73, 73, 73);
+  padding: 40px;
+  gap: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgb(92, 0, 146);
+}
+
+.game-over-window {
+  animation: fadeIn 0.2s ease-in;
+}
+
+.game-over-window > button {
+  border: none;
+  background-color: rgb(47, 23, 70);
+  padding: 20px;
+  color: aliceblue;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+h2 {
+  margin: 0px;
+}
+
+.game-over-background {
+  background-color: rgba(41, 41, 41, 0.8);
+  width: 100%;
+  height: calc(100vh - 120px);
+  position: absolute;
+}
+
+.pop-up-window > button:hover {
+  cursor: pointer;
+  background-color: rgb(79, 39, 119);
+  outline: 1px solid rebeccapurple;
+}
+
+.pop-up-window p {
+  margin: 0px;
+}
+
+span {
+  color: rgb(228, 197, 0);
+}
