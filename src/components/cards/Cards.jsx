@@ -32,27 +32,37 @@ function shuffleArray(array) {
   return array
 }
 
-function Cards({ pokemon }) {
-  // Create state to store the shuffled cards
-  const [shuffledCards, setShuffledCards] = useState(pokemon);
+function Cards({ pokemon, onCardClick }) {
+  const [shuffledCards, setShuffledCards] = useState(pokemon)
+  const [clickedCards, setClickedCards] = useState([])
 
-  function handleCardClick(e) {
-    e.target.clicked ? console.log('gameover') : console.log('good click')
-    e.target.clicked = true
-    setShuffledCards(shuffleArray([...shuffledCards]));
+  function handleCardClick(id) {
+    setClickedCards([...clickedCards, id])
+    if (clickedCards.includes(id)) {
+      //that pokemon was already clicked
+      onCardClick(true)
+    } else {
+      //first click
+      onCardClick(false)
+      setShuffledCards(shuffleArray([...shuffledCards]))
+    }
   }
 
   return (
-    <div className="cards" onClick={handleCardClick}>
+    <div className="cards">
       {shuffledCards.map((p) => (
-        <div className="card" key={p.name}>
+        <div
+          className="card"
+          id={p.name}
+          key={p.name}
+          onClick={() => handleCardClick(p.name)}
+        >
           <img src={getPokemonImg(p.url)} alt={`${p.name}, Pokémon`} />
           <p>{p.name.toUpperCase()}</p>
         </div>
       ))}
     </div>
-  );
+  )
 }
-
 
 export default Cards
