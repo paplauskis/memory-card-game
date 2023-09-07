@@ -2,8 +2,7 @@ import BestScore from './scores/Best-score'
 import CurrentScore from './scores/Current-score'
 import './Header.css'
 
-function Header({currentScore, bestScore}) {
-  
+function Header({ currentScore, bestScore }) {
   return (
     <header>
       <h1>Memory Card Game</h1>

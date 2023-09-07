@@ -26,7 +26,7 @@ function App() {
   }
 
   useEffect(() => {
-    if(bestScore === 12) handleCardClick(true)
+    if (bestScore === 12) handleCardClick(true)
   }, [bestScore])
 
   useEffect(() => {
@@ -39,7 +39,13 @@ function App() {
     <>
       <Header currentScore={currentScore} bestScore={bestScore} />
       <StartWindow />
-      {gameOver && <GameOverWindow score={gameOverScore} gameOver={gameOver} removeGameOver={handleGameOver}/>}
+      {gameOver && (
+        <GameOverWindow
+          score={gameOverScore}
+          gameOver={gameOver}
+          removeGameOver={handleGameOver}
+        />
+      )}
       <Cards pokemon={pokemonData} onCardClick={handleCardClick} />
     </>
   )

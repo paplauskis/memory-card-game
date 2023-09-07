@@ -7,7 +7,7 @@ function StartWindow() {
   function handleClick() {
     setShow(false)
   }
-  
+
   return (
     <>
       {show && (

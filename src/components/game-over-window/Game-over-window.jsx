@@ -14,19 +14,21 @@ function GameOverWindow({ score, removeGameOver }) {
       {show && (
         <div className="background-div game-over-background">
           <div className="game-over-window pop-up-window">
-            <h2 className="game-over-title">{score === 12 ? <>Woohoo!</> : <>Game Over!</>}</h2>
+            <h2 className="game-over-title">
+              {score === 12 ? <>Woohoo!</> : <>Game Over!</>}
+            </h2>
             <p className="description">
               {score === 12 ? (
-                <>
-                  You reached the maximum score, congratulations!
-                </>
+                <>You reached the maximum score, congratulations!</>
               ) : (
                 <>
                   You clicked the same card twice <br></br>
                 </>
               )}
             </p>
-            <p>Your score was: <span>{score}</span></p>
+            <p>
+              Your score was: <span>{score}</span>
+            </p>
             <button onClick={handleClick}>Try again</button>
           </div>
         </div>
