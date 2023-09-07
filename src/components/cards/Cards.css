@@ -29,6 +29,7 @@
   background-color: rgb(91, 91, 91);
   outline: 2px solid rgb(79, 39, 119);
   box-shadow: 0px 5px 30px rgb(0, 0, 0);
+  scale: 1.03;
 }
 
 .card:active {
