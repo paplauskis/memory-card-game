@@ -2,19 +2,25 @@ import Header from './components/header/Header'
 import StartWindow from './components/start-window/Start-window'
 import Cards from './components/cards/Cards'
 import pokemonData from './utils/data'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function App() {
   const [currentScore, setCurrentScore] = useState(0)
   const [bestScore, setBestScore] = useState(0)
+  const [gameOver, setGameOver] = useState(false)
 
   function handleCardClick(clicked) {
     if (clicked) {
-      console.log('second');
+      setGameOver(true)
     } else {
-      console.log('first');
+      setCurrentScore(currentScore + 1)
     }
   }
+  useEffect(() => {
+    if (currentScore > bestScore) {
+      setBestScore(currentScore)
+    }
+  }, [currentScore])
 
   return (
     <>
