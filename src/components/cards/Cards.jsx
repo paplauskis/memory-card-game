@@ -38,13 +38,14 @@ function Cards({ pokemon, onCardClick }) {
 
   function handleCardClick(id) {
     setClickedCards([...clickedCards, id])
+    setShuffledCards(shuffleArray([...shuffledCards]))
     if (clickedCards.includes(id)) {
-      //that pokemon was already clicked
+      //pokemon was already clicked (incorrect)
       onCardClick(true)
+      setClickedCards([])
     } else {
-      //first click
+      //first click (correct)
       onCardClick(false)
-      setShuffledCards(shuffleArray([...shuffledCards]))
     }
   }
 
