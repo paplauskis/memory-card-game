@@ -26,6 +26,10 @@ function App() {
   }
 
   useEffect(() => {
+    if(bestScore === 12) handleCardClick(true)
+  }, [bestScore])
+
+  useEffect(() => {
     if (currentScore > bestScore) {
       setBestScore(currentScore)
     }
