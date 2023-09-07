@@ -7,11 +7,12 @@ function StartWindow() {
   function handleClick() {
     setShow(false)
   }
+  
   return (
     <>
       {show && (
         <div className="background-div">
-          <div className="start-window">
+          <div className="start-window pop-up-window">
             <h2 className="instructions">Instructions</h2>
             <p className="description">
               Don't click on the same card twice. That's about it. Good luck!
