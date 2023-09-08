@@ -11,9 +11,10 @@
 
 header {
   background-color: rgb(47, 23, 70);
-  padding: 10px 150px;
+  padding: 10px 6vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-height: 100px;
   position: relative;
   animation: fadeIn 0.5s ease-in;
@@ -26,10 +27,21 @@ header > h1 {
 
 header p {
   font-size: 1.2rem;
-  margin: auto;
+  margin: 5px;
 }
 
 .scores {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 680px) {
+  h1 {
+    font-size: 1rem;
+    max-width: 6ch;
+  }
+
+  header p {
+    font-size: 0.8rem;
+  }
 }
