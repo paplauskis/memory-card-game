@@ -1,8 +1,9 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin: 5vh 100px;
+  grid-template-columns: repeat(auto-fill, 270px);
+  margin: 5vh 1vw;
   gap: 20px;
+  justify-content: center;
 }
 
 .card {
@@ -34,4 +35,24 @@
 
 .card:active {
   background-color: black;
+}
+
+@media (max-width: 1440px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+}
+
+@media (max-width: 450px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, 140px);
+  }
+
+  .card img {
+    max-width: 140px;
+  }
+
+  .card {
+    height: 200px;
+  }
 }
