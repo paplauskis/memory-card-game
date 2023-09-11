@@ -37,7 +37,7 @@
   background-color: black;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1500px) {
   .cards {
     grid-template-columns: repeat(auto-fill, 200px);
   }
